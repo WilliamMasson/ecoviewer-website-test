@@ -1,18 +1,10 @@
-// Nav scroll effect
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-});
-
-// Mobile burger (basic toggle — wire up to a mobile menu if needed)
-const burger = document.getElementById('burger');
-if (burger) {
-  burger.addEventListener('click', () => {
-    document.querySelector('.nav-links')?.classList.toggle('open');
-  });
+if (nav) {
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll);
+  onScroll();
 }
 
-// Fade-in on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -20,11 +12,13 @@ const observer = new IntersectionObserver((entries) => {
       e.target.style.transform = 'translateY(0)';
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
-document.querySelectorAll('.feature-card, .usecase-card, .team-card, .resource-item, .tutorial-step').forEach(el => {
+document.querySelectorAll(
+  '.feature-card, .usecase-card, .team-card, .resource-item, .tutorial-step, .biome-card, .content-card'
+).forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  el.style.transform = 'translateY(18px)';
+  el.style.transition = `opacity 0.55s ease ${i * 0.04}s, transform 0.55s ease ${i * 0.04}s`;
   observer.observe(el);
 });

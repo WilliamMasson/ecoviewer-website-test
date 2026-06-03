@@ -1,206 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>EcoViewer — Global Ecosystems Reference Library</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo">Eco<span>Viewer</span></a>
+    <a href="./" class="nav-logo">Eco<span>Viewer</span></a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="/about">Team</a></li>
-      <li><a href="/resources">Resources</a></li>
-      <li><a href="/tutorials">Tutorials</a></li>
+      <li><a href="./" class="active">Home</a></li>
+      <li><a href="./about/">Team</a></li>
+      <li><a href="./resources/">Resources</a></li>
+      <li><a href="./tutorials/">Tutorials</a></li>
     </ul>
-    <a href="/app" class="nav-cta">Launch App →</a>
-    <button class="nav-burger" id="burger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="./app/" class="nav-cta">Launch App →</a>
+    <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow"></div>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&auto=format&fit=crop&q=80" alt="Forest canopy" class="hero-img"/>
+      <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
       <p class="hero-eyebrow"><span class="dot"></span> Global · Multi-Source · High-Resolution</p>
-      <h1 class="hero-title">
-        A reference library<br />
-        <em>for the living world</em>
-      </h1>
-      <p class="hero-sub">
-        EcoViewer is a multi-source environmental reference library providing high-resolution context
-        for ecological characterization and satellite imagery annotation — worldwide.
-      </p>
+      <h1 class="hero-title">A reference library<br/><em>for the living world</em></h1>
+      <p class="hero-sub">EcoViewer is a multi-source environmental reference library providing high-resolution context for ecological characterisation and satellite imagery annotation — worldwide.</p>
       <div class="hero-actions">
-        <a href="/app" class="btn-primary">Launch EcoViewer</a>
-        <a href="/tutorials" class="btn-ghost">Watch Demo</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="globe-ring r1"></div>
-      <div class="globe-ring r2"></div>
-      <div class="globe-ring r3"></div>
-      <div class="globe-core">
-        <span class="mono-stat">450M+<br/><small>ha indexed</small></span>
+        <a href="./app/" class="btn-primary">Launch EcoViewer</a>
+        <a href="./tutorials/" class="btn-ghost">View Tutorials</a>
       </div>
     </div>
     <div class="hero-scroll">scroll <span class="scroll-line"></span></div>
   </section>
 
-  <!-- STATS BAR -->
   <section class="stats-bar">
     <div class="stat"><span class="stat-num">Global</span><span class="stat-label">Coverage</span></div>
     <div class="stat-div"></div>
     <div class="stat"><span class="stat-num">Multi</span><span class="stat-label">Source Data</span></div>
     <div class="stat-div"></div>
-    <div class="stat"><span class="stat-num">High-Res</span><span class="stat-label">Imagery</span></div>
+    <div class="stat"><span class="stat-num">GBIF</span><span class="stat-label">Species Mapping</span></div>
     <div class="stat-div"></div>
     <div class="stat"><span class="stat-num">Open</span><span class="stat-label">Access</span></div>
   </section>
 
-  <!-- WHAT IS -->
   <section class="section what">
     <div class="section-inner">
       <div class="what-text">
-        <p class="section-tag">// What is EcoViewer</p>
-        <h2 class="section-title">Ecological context,<br /><em>at any scale</em></h2>
-        <p class="section-body">
-          EcoViewer brings together high-resolution environmental datasets from multiple sources into a single, 
-          unified reference platform. Designed for ecologists, remote sensing specialists, and conservation 
-          practitioners who need reliable ground-truth context for landscape analysis and imagery annotation.
-        </p>
-        <a href="/about" class="link-arrow">About the project →</a>
+        <p class="section-tag">What is EcoViewer</p>
+        <h2 class="section-title">Ecological context,<br/><em>at any scale</em></h2>
+        <p class="section-body">EcoViewer brings together high-resolution environmental datasets from multiple sources into a unified reference platform — designed for ecologists, remote sensing specialists, and conservation practitioners.</p>
+        <p class="section-body" style="margin-top:1rem;">The integrated GBIF layer maps species occurrence data directly to ecosystem types, bridging biodiversity records with landscape-level ecological context.</p>
+        <a href="./about/" class="link-arrow">About the project →</a>
       </div>
       <div class="what-cards">
-        <div class="feature-card">
-          <div class="card-icon">⬡</div>
-          <h3>Multi-Source Integration</h3>
-          <p>Aggregates data across diverse environmental repositories into a coherent, queryable reference layer.</p>
-        </div>
-        <div class="feature-card">
-          <div class="card-icon">◎</div>
-          <h3>Satellite Annotation</h3>
-          <p>Purpose-built context for labelling satellite imagery with ecological precision and confidence.</p>
-        </div>
-        <div class="feature-card">
-          <div class="card-icon">◈</div>
-          <h3>Global Reach</h3>
-          <p>From tropical rainforests to arctic tundra — comprehensive coverage across all biomes worldwide.</p>
-        </div>
-        <div class="feature-card">
-          <div class="card-icon">⬕</div>
-          <h3>Built on Earth Engine</h3>
-          <p>Powered by Google Earth Engine's planetary-scale computing infrastructure for fast, reliable access.</p>
-        </div>
+        <div class="feature-card"><div class="card-icon">🌿</div><h3>Multi-Source Integration</h3><p>Aggregates data across diverse environmental repositories into a coherent, queryable reference layer.</p></div>
+        <div class="feature-card"><div class="card-icon">🛰️</div><h3>Satellite Annotation</h3><p>Purpose-built context for labelling satellite imagery with ecological precision and confidence.</p></div>
+        <div class="feature-card"><div class="card-icon">🔬</div><h3>GBIF Species Mapping</h3><p>Species occurrence records from GBIF mapped to ecosystem types for biodiversity-informed characterisation.</p></div>
+        <div class="feature-card"><div class="card-icon">🌍</div><h3>Built on Earth Engine</h3><p>Powered by Google Earth Engine's planetary-scale computing infrastructure for fast, reliable access.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- PREVIEW SECTION -->
-  <section class="section preview">
+  <section class="section biomes">
+    <div class="section-inner centered" style="margin-bottom:3rem;">
+      <p class="section-tag">Ecosystems Covered</p>
+      <h2 class="section-title">From rainforest to tundra,<br/><em>every biome on Earth</em></h2>
+    </div>
+    <div class="biome-grid">
+      <div class="biome-card"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&auto=format&fit=crop&q=75" alt="Temperate forest"/><div class="biome-label">Temperate Forest</div></div>
+      <div class="biome-card biome-tall"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&auto=format&fit=crop&q=75" alt="Tropical rainforest"/><div class="biome-label">Tropical Rainforest</div></div>
+      <div class="biome-card"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop&q=75" alt="Desert"/><div class="biome-label">Arid &amp; Desert</div></div>
+      <div class="biome-card"><img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=600&auto=format&fit=crop&q=75" alt="Wetlands"/><div class="biome-label">Wetlands &amp; Rivers</div></div>
+      <div class="biome-card biome-tall"><img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&auto=format&fit=crop&q=75" alt="Arctic tundra"/><div class="biome-label">Arctic &amp; Tundra</div></div>
+      <div class="biome-card"><img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600&auto=format&fit=crop&q=75" alt="Grassland"/><div class="biome-label">Grassland &amp; Savanna</div></div>
+    </div>
+  </section>
+
+  <section class="preview">
     <div class="preview-label">
-      <p class="section-tag">// App Preview</p>
-      <h2 class="section-title">Explore the<br /><em>interface</em></h2>
+      <p class="section-tag">App Preview</p>
+      <h2 class="section-title">Explore the<br/><em>interface</em></h2>
       <p class="section-body">Interact with global environmental layers directly in your browser. No installation required.</p>
-      <a href="/app" class="btn-primary" style="margin-top:2rem;display:inline-block">Open Full App →</a>
+      <a href="./app/" class="btn-primary" style="margin-top:2rem;display:inline-block;">Open Full App →</a>
     </div>
     <div class="preview-frame">
-      <div class="frame-bar">
-        <span class="fb r"></span><span class="fb y"></span><span class="fb g"></span>
-        <span class="frame-url">ecoviewer.org/app</span>
-      </div>
-      <div class="frame-content">
-        <iframe
-          src="https://geo-global-ecosystems-atlas.projects.earthengine.app/view/ecoviewer"
-          title="EcoViewer App"
-          loading="lazy"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <div class="frame-bar"><span class="fb r"></span><span class="fb y"></span><span class="fb g"></span><span class="frame-url">ecoviewer.org/app</span></div>
+      <div class="frame-content"><iframe src="https://geo-global-ecosystems-atlas.projects.earthengine.app/view/ecoviewer" title="EcoViewer App" loading="lazy" allowfullscreen></iframe></div>
     </div>
   </section>
 
-  <!-- USE CASES -->
   <section class="section usecases">
     <div class="section-inner centered">
-      <p class="section-tag">// Who uses EcoViewer</p>
-      <h2 class="section-title">Built for the field,<br /><em>and the lab</em></h2>
+      <p class="section-tag">Who uses EcoViewer</p>
+      <h2 class="section-title">Built for the field,<br/><em>and the lab</em></h2>
     </div>
     <div class="usecase-grid">
-      <div class="usecase-card">
-        <span class="uc-num">01</span>
-        <h3>Remote Sensing Analysts</h3>
-        <p>Validate and annotate satellite imagery with high-confidence ecological reference data from multiple verified sources.</p>
-      </div>
-      <div class="usecase-card">
-        <span class="uc-num">02</span>
-        <h3>Conservation Practitioners</h3>
-        <p>Characterise landscapes and monitor ecosystem condition across large, complex territories at continental scale.</p>
-      </div>
-      <div class="usecase-card">
-        <span class="uc-num">03</span>
-        <h3>Ecological Researchers</h3>
-        <p>Access consistent, reproducible environmental context for comparative studies and longitudinal ecosystem analysis.</p>
-      </div>
+      <div class="usecase-card"><span class="uc-num">01</span><h3>Remote Sensing Analysts</h3><p>Validate and annotate satellite imagery with high-confidence ecological reference data from multiple verified sources.</p></div>
+      <div class="usecase-card"><span class="uc-num">02</span><h3>Conservation Practitioners</h3><p>Characterise landscapes and monitor ecosystem condition across large, complex territories at continental scale.</p></div>
+      <div class="usecase-card"><span class="uc-num">03</span><h3>Ecological Researchers</h3><p>Access consistent, reproducible environmental context for comparative studies and longitudinal ecosystem analysis.</p></div>
     </div>
   </section>
 
-  <!-- CTA BAND -->
   <section class="cta-band">
-    <div class="cta-inner">
-      <h2>Ready to explore<br /><em>the living world?</em></h2>
-      <a href="/app" class="btn-primary large">Launch EcoViewer</a>
-    </div>
-    <div class="cta-bg"></div>
+    <div class="cta-img-wrap"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1800&auto=format&fit=crop&q=80" alt="Mountain landscape"/><div class="cta-overlay"></div></div>
+    <div class="cta-inner"><h2>Ready to explore<br/><em>the living world?</em></h2><a href="./app/" class="btn-primary large">Launch EcoViewer</a></div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-logo">Eco<em>Viewer</em></span>
-        <p>A multi-source environmental reference library for ecological characterization and satellite imagery annotation.</p>
-      </div>
+      <div class="footer-brand"><span class="footer-logo">Eco<em>Viewer</em></span><p>A multi-source environmental reference library for ecological characterisation and satellite imagery annotation.</p></div>
       <div class="footer-links">
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <a href="index.html">Home</a>
-          <a href="/about">Team</a>
-          <a href="/resources">Resources</a>
-          <a href="/tutorials">Tutorials</a>
-          <a href="/app">Launch App</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="/legal/terms">Terms of Service</a>
-          <a href="/legal/privacy">Privacy Policy</a>
-          <a href="/legal/cookies">Cookie Policy</a>
-          <a href="/legal/disclaimer">Disclaimer</a>
-        </div>
-        <div class="footer-col">
-          <h4>External</h4>
-          <a href="https://earthengine.google.com" target="_blank">Google Earth Engine</a>
-          <a href="https://earthengine.google.com/terms" target="_blank">GEE Terms</a>
-        </div>
+        <div class="footer-col"><h4>Navigation</h4><a href="./">Home</a><a href="./about/">Team</a><a href="./resources/">Resources</a><a href="./tutorials/">Tutorials</a><a href="./app/">Launch App</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="./legal/terms/">Terms of Service</a><a href="./legal/privacy/">Privacy Policy</a><a href="./legal/cookies/">Cookie Policy</a><a href="./legal/disclaimer/">Disclaimer</a></div>
+        <div class="footer-col"><h4>External</h4><a href="https://earthengine.google.com" target="_blank">Google Earth Engine</a><a href="https://www.gbif.org" target="_blank">GBIF</a><a href="https://iucnrle.org" target="_blank">IUCN RLE</a></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 EcoViewer. All rights reserved.</span>
-      <span class="footer-built">Built on Google Earth Engine</span>
-    </div>
+    <div class="footer-bottom"><span>© 2025 EcoViewer. All rights reserved.</span><span>Built on Google Earth Engine</span></div>
   </footer>
-
-  <script src="main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
