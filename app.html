@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App — EcoViewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" id="nav">
+    <a href="../index.html" class="nav-logo">Eco<span>Viewer</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">Team</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="tutorials.html">Tutorials</a></li>
+    </ul>
+    <a href="tutorials.html" class="btn-ghost" style="font-size:0.75rem; padding:0.4rem 1rem;">Help</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="app-page">
+    <iframe
+      src="https://geo-global-ecosystems-atlas.projects.earthengine.app/view/ecoviewer"
+      title="EcoViewer Application"
+      allowfullscreen
+      loading="eager">
+    </iframe>
+  </div>
+
+  <script src="../main.js"></script>
+</body>
+</html>
