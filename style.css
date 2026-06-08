@@ -239,7 +239,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text2);
-  background: var(--surface);
+  background: transparent;
   border: 1.5px solid var(--border2);
   padding: 0.8rem 1.8rem;
   border-radius: 100px;
@@ -247,7 +247,7 @@ body {
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   display: inline-block;
 }
-.btn-ghost:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(61,140,64,0.35); }
+.btn-ghost:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); }
 
 .link-arrow {
   font-family: var(--sans);
@@ -344,7 +344,7 @@ body {
 /* ============================================================
    WHAT SECTION
    ============================================================ */
-.what { background: var(--bg); }
+.what { background: var(--surface); }
 .what-text {
   flex: 1;
   min-width: 280px;
@@ -358,7 +358,7 @@ body {
   gap: 1.25rem;
 }
 .feature-card {
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
@@ -380,7 +380,7 @@ body {
   display: flex;
   gap: 5rem;
   align-items: flex-start;
-  background: var(--surface);
+  background: var(--bg);
   padding: 7rem 4rem;
 }
 .preview-label {
@@ -420,7 +420,7 @@ body {
 /* ============================================================
    USE CASES
    ============================================================ */
-.usecases { background: var(--bg); }
+.usecases { background: var(--surface); }
 .usecase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -429,7 +429,7 @@ body {
   margin: 3.5rem auto 0;
 }
 .usecase-card {
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
@@ -552,3 +552,215 @@ body {
 /* ============================================================
    GLOBE (hero visual)
 
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+
+/* Project description */
+.about-project { background: var(--bg); }
+.about-project-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+}
+.about-text-block {
+  flex: 1;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.about-pillars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.pillar-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border2);
+}
+.pillar-item:first-child { border-top: 1px solid var(--border2); }
+.pillar-num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+  min-width: 2rem;
+}
+.pillar-item h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+.pillar-item p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Team */
+.team { background: var(--surface); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 3.5rem auto 0;
+}
+.team-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.team-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.team-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  border: 2px solid rgba(61,140,64,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.team-avatar span {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--green3);
+  letter-spacing: 0.05em;
+}
+.team-info { flex: 1; min-width: 0; }
+.team-info h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+.team-role {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.team-bio {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.team-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.team-link {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+.team-link:hover { color: var(--green3); }
+
+/* Contributors */
+.contributors { background: var(--bg); }
+.contributors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.contributor-card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 160px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.contributor-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.contributor-card--ghost {
+  border-style: dashed;
+  background: transparent;
+}
+.contributor-avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contributor-avatar span {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--green3);
+  letter-spacing: 0.04em;
+}
+.contributor-avatar--plus {
+  background: var(--border2);
+}
+.contributor-avatar--plus span {
+  font-size: 1.1rem;
+  color: var(--text3);
+}
+.contributor-name {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.contributor-detail {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+}
+.contributor-detail a {
+  color: var(--green);
+  text-decoration: none;
+}
+.contributor-detail a:hover { color: var(--green3); }
+
+/* About responsive */
+@media (max-width: 1024px) {
+  .about-project-inner { flex-direction: column; gap: 3rem; }
+  .about-text-block { position: static; }
+  .team-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .team-card { flex-direction: column; }
+  .contributors-grid { gap: 0.75rem; }
+  .contributor-card { width: 140px; }
+}
