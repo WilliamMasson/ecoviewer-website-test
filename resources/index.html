@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — EcoViewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="../" class="nav-logo">Eco<span>Viewer</span></a>
+    <ul class="nav-links">
+      <li><a href="../">Home</a></li>
+      <li><a href="../about/">About</a></li>
+      <li><a href="../resources/" class="active">Resources</a></li>
+      <li><a href="../tutorials/">Tutorials</a></li>
+    </ul>
+    <a href="../app/" class="nav-cta">Launch App →</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="section-tag">// Resources</p>
+      <h1>Data, methods,<br /><em>and references</em></h1>
+      <p class="lead">
+        An overview of how EcoViewer is structured, the datasets that power it,
+        and the scientific literature underpinning the ecological cross-referencing methodology.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section res-structure">
+    <div class="section-inner">
+      <div class="res-structure-text">
+        <p class="section-tag">// How EcoViewer is organised</p>
+        <h2 class="section-title">Five thematic<br /><em>analysis layers</em></h2>
+        <p class="section-body">
+          EcoViewer is organised around five thematic panels, each grouping related
+          environmental variables into a coherent view. Select a location on the map
+          and switch between panels to explore different dimensions of the ecosystem
+          at that point.
+        </p>
+        <p class="section-body" style="margin-top:1rem;">
+          All layers are derived from peer-reviewed, publicly available datasets
+          processed through Google Earth Engine. Citations for every dataset are
+          listed in the section below.
+        </p>
+      </div>
+      <div class="res-tabs">
+
+        <div class="res-tab">
+          <div class="res-tab-header">
+            <span class="res-tab-num">01</span>
+            <h3>Climatic Info</h3>
+          </div>
+          <p>Long-term climate variables including mean annual rainfall, temperature seasonality, and aridity indices. Useful for characterising the broad climatic envelope of an ecosystem.</p>
+          <div class="res-tab-tags">
+            <span>Rainfall</span><span>Temperature</span><span>Aridity</span>
+          </div>
+        </div>
+
+        <div class="res-tab">
+          <div class="res-tab-header">
+            <span class="res-tab-num">02</span>
+            <h3>Vegetation</h3>
+          </div>
+          <p>Structural and compositional vegetation attributes including land cover classification, tree canopy cover, and grass layer characteristics. Core inputs for ecological characterisation.</p>
+          <div class="res-tab-tags">
+            <span>Land Cover</span><span>Tree Canopy</span><span>Grass Layer</span>
+          </div>
+        </div>
+
+        <div class="res-tab">
+          <div class="res-tab-header">
+            <span class="res-tab-num">03</span>
+            <h3>Waterbodies &amp; Wetlands</h3>
+          </div>
+          <p>Surface water and wetland extent, including wetland classification, mapped rivers and lakes, and seasonal inundation patterns. Essential context for riparian and aquatic ecosystems.</p>
+          <div class="res-tab-tags">
+            <span>Wetland Class</span><span>Rivers</span><span>Lakes</span>
+          </div>
+        </div>
+
+        <div class="res-tab">
+          <div class="res-tab-header">
+            <span class="res-tab-num">04</span>
+            <h3>Fire Disturbance</h3>
+          </div>
+          <p>Historical and recent fire occurrence data, including burn frequency and fire radiative power. Important for understanding disturbance regimes and ecosystem dynamics over time.</p>
+          <div class="res-tab-tags">
+            <span>Burn Frequency</span><span>Fire Radiative Power</span>
+          </div>
+        </div>
+
+        <div class="res-tab">
+          <div class="res-tab-header">
+            <span class="res-tab-num">05</span>
+            <h3>GBIF Occurrences</h3>
+          </div>
+          <p>Species occurrence records from the Global Biodiversity Information Facility (GBIF), cross-referenced to ecosystem types using peer-reviewed ecological literature. Helps contextualise biodiversity within the broader landscape.</p>
+          <div class="res-tab-tags">
+            <span>Species Occurrences</span><span>Ecosystem Cross-reference</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DATASETS -->
+  <section class="section res-datasets">
+    <div class="res-table-wrap">
+      <div class="res-section-header">
+        <p class="section-tag">// Datasets</p>
+        <h2 class="section-title">Data sources<br /><em>and credits</em></h2>
+        <p class="section-body">All datasets used in EcoViewer are publicly available and freely accessible. The table below lists each dataset, its provider, licence, and relevant references.</p>
+      </div>
+
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Description</th>
+              <th>Provider / Author</th>
+              <th>Licence</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="td-name">MODIS Land Cover<br /><span class="td-sub">MCD12Q1</span></td>
+              <td>Annual global land cover classification at 500 m resolution based on the IGBP scheme.</td>
+              <td>NASA / USGS</td>
+              <td><span class="td-badge">Public Domain</span></td>
+              <td class="td-links">
+                <a href="https://lpdaac.usgs.gov/products/mcd12q1v061/" target="_blank" rel="noopener">Dataset ↗</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td-name">Global Forest Cover<br /><span class="td-sub">Hansen et al.</span></td>
+              <td>Tree canopy cover, forest extent, gain and loss at 30 m resolution from Landsat imagery.</td>
+              <td>Hansen, M.C. et al. (2013)</td>
+              <td><span class="td-badge">CC BY 4.0</span></td>
+              <td class="td-links">
+                <a href="https://glad.earthengine.app/view/global-forest-change" target="_blank" rel="noopener">Dataset ↗</a>
+                <a href="https://doi.org/10.1126/science.1244693" target="_blank" rel="noopener">Paper ↗</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td-name">Global Surface Water<br /><span class="td-sub">Pekel et al.</span></td>
+              <td>Monthly surface water presence and seasonality derived from 30+ years of Landsat imagery.</td>
+              <td>Pekel, J.F. et al. (2016)</td>
+              <td><span class="td-badge">CC BY 4.0</span></td>
+              <td class="td-links">
+                <a href="https://global-surface-water.appspot.com/" target="_blank" rel="noopener">Dataset ↗</a>
+                <a href="https://doi.org/10.1038/nature20584" target="_blank" rel="noopener">Paper ↗</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td-name">MODIS Fire<br /><span class="td-sub">MCD64A1</span></td>
+              <td>Monthly burned area product at 500 m resolution derived from MODIS surface reflectance.</td>
+              <td>NASA / USGS</td>
+              <td><span class="td-badge">Public Domain</span></td>
+              <td class="td-links">
+                <a href="https://lpdaac.usgs.gov/products/mcd64a1v061/" target="_blank" rel="noopener">Dataset ↗</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td-name">WorldClim v2<br /><span class="td-sub">Fick &amp; Hijmans</span></td>
+              <td>High-resolution global climate data including temperature and precipitation at 1 km resolution.</td>
+              <td>Fick, S.E. &amp; Hijmans, R.J. (2017)</td>
+              <td><span class="td-badge">CC BY 4.0</span></td>
+              <td class="td-links">
+                <a href="https://www.worldclim.org/" target="_blank" rel="noopener">Dataset ↗</a>
+                <a href="https://doi.org/10.1002/joc.5086" target="_blank" rel="noopener">Paper ↗</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="td-name">GBIF Occurrence Data<br /><span class="td-sub">gbif.org</span></td>
+              <td>Global species occurrence records contributed by institutions and citizen scientists worldwide.</td>
+              <td>GBIF Secretariat</td>
+              <td><span class="td-badge">CC BY 4.0</span></td>
+              <td class="td-links">
+                <a href="https://www.gbif.org/" target="_blank" rel="noopener">Dataset ↗</a>
+              </td>
+            </tr>
+
+            <!-- Add further datasets below -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LITERATURE -->
+  <section class="section res-literature">
+    <div class="res-table-wrap">
+      <div class="res-section-header">
+        <p class="section-tag">// Literature</p>
+        <h2 class="section-title">Species–ecosystem<br /><em>cross-reference sources</em></h2>
+        <p class="section-body">The following publications and resources are used to cross-reference GBIF species occurrence data with ecosystem types and ecological classifications.</p>
+      </div>
+
+      <div class="data-table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Authors</th>
+              <th>Year</th>
+              <th>Journal / Source</th>
+              <th>DOI / Link</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="td-name">An Update of Wallace's Zoogeographic Regions of the World</td>
+              <td>Holt, B.G. et al.</td>
+              <td>2013</td>
+              <td><em>Science</em></td>
+              <td class="td-links"><a href="https://doi.org/10.1126/science.1228282" target="_blank" rel="noopener">DOI ↗</a></td>
+            </tr>
+
+            <tr>
+              <td class="td-name">A New Map of Global Ecological Regions</td>
+              <td>Olson, D.M. et al.</td>
+              <td>2001</td>
+              <td><em>BioScience</em></td>
+              <td class="td-links"><a href="https://doi.org/10.1641/0006-3568(2001)051[0933:TNMOGE]2.0.CO;2" target="_blank" rel="noopener">DOI ↗</a></td>
+            </tr>
+
+            <tr>
+              <td class="td-name">Placeholder title — replace with actual reference</td>
+              <td>Author, A. et al.</td>
+              <td>20XX</td>
+              <td><em>Journal Name</em></td>
+              <td class="td-links"><a href="#" class="td-placeholder">DOI ↗</a></td>
+            </tr>
+
+            <!-- Add further references below -->
+
+          </tbody>
+        </table>
+      </div>
+
+      <p class="res-note">
+        All references follow standard citation practices. If you use EcoViewer in your research,
+        please cite the relevant datasets and publications above alongside the
+        <a href="https://github.com/ecoviewer" target="_blank" rel="noopener">EcoViewer platform</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-inner">
+      <h2>Ready to explore<br /><em>the living world?</em></h2>
+      <a href="../app/" class="btn-primary large">Launch EcoViewer</a>
+    </div>
+    <div class="cta-bg"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">Eco<em>Viewer</em></span>
+        <p>A multi-source environmental reference library for ecological characterization and satellite imagery annotation.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a href="../resources/">Resources</a>
+          <a href="../tutorials/">Tutorials</a>
+          <a href="../app/">Launch App</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="../legal/terms/">Terms of Service</a>
+          <a href="../legal/privacy/">Privacy Policy</a>
+          <a href="../legal/cookies/">Cookie Policy</a>
+          <a href="../legal/disclaimer/">Disclaimer</a>
+        </div>
+        <div class="footer-col">
+          <h4>External</h4>
+          <a href="https://earthengine.google.com" target="_blank" rel="noopener">Google Earth Engine</a>
+          <a href="https://earthengine.google.com/terms" target="_blank" rel="noopener">GEE Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 EcoViewer. All rights reserved.</span>
+      <span class="footer-built">Built on Google Earth Engine</span>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

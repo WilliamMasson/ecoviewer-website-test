@@ -886,3 +886,182 @@ body {
   .app-nav-links { display: none; }
   .app-nav-open { margin-left: auto; }
 }
+
+/* ============================================================
+   RESOURCES PAGE
+   ============================================================ */
+
+/* Structure section */
+.res-structure { background: var(--surface); }
+.res-structure-text {
+  flex: 0 0 320px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.res-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.res-tab {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border2);
+}
+.res-tab:first-child { border-top: 1px solid var(--border2); }
+.res-tab-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+.res-tab-num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+.res-tab h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.res-tab p {
+  font-size: 0.9rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+.res-tab-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.res-tab-tags span {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--green3);
+  background: var(--green-dim);
+  border: 1px solid rgba(61,140,64,0.15);
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+
+/* Datasets & Literature shared */
+.res-datasets { background: var(--bg); }
+.res-literature { background: var(--surface); }
+
+.res-table-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.res-section-header {
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+.data-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadow-sm);
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  background: var(--surface);
+}
+.data-table thead tr {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border2);
+}
+.data-table th {
+  padding: 0.9rem 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+}
+.data-table tbody tr {
+  border-bottom: 1px solid var(--border2);
+  transition: background 0.15s;
+}
+.data-table tbody tr:last-child { border-bottom: none; }
+.data-table tbody tr:hover { background: var(--bg); }
+.data-table td {
+  padding: 1rem 1.25rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.65;
+  vertical-align: top;
+}
+.data-table td em {
+  font-style: italic;
+  color: var(--text2);
+}
+.td-name {
+  font-weight: 500;
+  color: var(--text) !important;
+  white-space: nowrap;
+}
+.td-sub {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  margin-top: 0.2rem;
+}
+.td-badge {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--green3);
+  background: var(--green-dim);
+  border: 1px solid rgba(61,140,64,0.15);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.td-links {
+  white-space: nowrap;
+}
+.td-links a {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-right: 0.75rem;
+  transition: color 0.2s;
+}
+.td-links a:hover { color: var(--green3); }
+.td-links a.td-placeholder { color: var(--text3); }
+.res-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text3);
+  font-weight: 400;
+  line-height: 1.75;
+}
+.res-note a {
+  color: var(--green);
+  text-decoration: none;
+}
+.res-note a:hover { color: var(--green3); }
+
+/* Resources responsive */
+@media (max-width: 1024px) {
+  .res-structure-text { position: static; flex: none; }
+  .data-table th, .data-table td { padding: 0.75rem 1rem; }
+}
