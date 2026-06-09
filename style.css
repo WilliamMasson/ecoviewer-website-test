@@ -377,9 +377,6 @@ body {
    PREVIEW SECTION
    ============================================================ */
 .preview {
-  display: flex;
-  gap: 5rem;
-  align-items: flex-start;
   background: var(--surface);
   padding: 7rem 4rem;
 }
