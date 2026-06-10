@@ -1062,3 +1062,231 @@ body {
   .res-structure-text { position: static; flex: none; }
   .data-table th, .data-table td { padding: 0.75rem 1rem; }
 }
+
+/* ============================================================
+   TUTORIALS PAGE
+   ============================================================ */
+
+/* Quick start */
+.tut-quickstart { background: var(--surface); }
+.tut-qs-text {
+  flex: 0 0 300px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.tut-steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.tutorial-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border2);
+}
+.tutorial-step:first-child { border-top: 1px solid var(--border2); }
+.tut-step-num {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--green);
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+  padding-top: 0.2rem;
+  min-width: 2rem;
+}
+.tutorial-step h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+.tutorial-step p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Video */
+.tut-video { background: var(--bg); }
+.tut-video-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+}
+.tut-video-label {
+  flex: 0 0 280px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.tut-video-frame {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 16 / 9;
+  background: var(--bg3);
+}
+.tut-video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.tut-video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--bg2);
+  min-height: 320px;
+}
+.tut-video-icon {
+  font-size: 2.5rem;
+  color: var(--green);
+  opacity: 0.5;
+}
+.tut-video-placeholder p {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text2);
+}
+.tut-video-sub {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+}
+
+/* Repos */
+.tut-repos { background: var(--surface); }
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.repo-card {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+.repo-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: rgba(61,140,64,0.2);
+}
+.repo-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.repo-icon {
+  color: var(--text3);
+}
+.repo-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--text3);
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+}
+.repo-card h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.repo-card p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.75;
+  flex: 1;
+}
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  letter-spacing: 0.05em;
+}
+.repo-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.repo-lang em {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  font-style: normal;
+}
+
+/* FAQ */
+.tut-faq { background: var(--bg); }
+.faq-text {
+  flex: 0 0 280px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.faq-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.faq-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border2);
+}
+.faq-item:first-child { border-top: 1px solid var(--border2); }
+.faq-item h3 {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.faq-item p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.8;
+}
+.faq-item a {
+  color: var(--green);
+  text-decoration: none;
+}
+.faq-item a:hover { color: var(--green3); }
+
+/* Tutorials responsive */
+@media (max-width: 1024px) {
+  .tut-qs-text, .tut-video-label, .faq-text { position: static; flex: none; }
+  .tut-video-inner { flex-direction: column; gap: 3rem; }
+  .repo-grid { grid-template-columns: 1fr; }
+}
