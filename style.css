@@ -239,7 +239,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text2);
-  background: var(--surface);
+  background: transparent;
   border: 1.5px solid var(--border2);
   padding: 0.8rem 1.8rem;
   border-radius: 100px;
@@ -247,7 +247,7 @@ body {
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   display: inline-block;
 }
-.btn-ghost:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(61,140,64,0.35); }
+.btn-ghost:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); }
 
 .link-arrow {
   font-family: var(--sans);
@@ -344,7 +344,7 @@ body {
 /* ============================================================
    WHAT SECTION
    ============================================================ */
-.what { background: var(--bg); }
+.what { background: var(--surface); }
 .what-text {
   flex: 1;
   min-width: 280px;
@@ -358,7 +358,7 @@ body {
   gap: 1.25rem;
 }
 .feature-card {
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
@@ -377,7 +377,10 @@ body {
    PREVIEW SECTION
    ============================================================ */
 .preview {
-  background: var(--surface);
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  background: var(--bg);
   padding: 7rem 4rem;
 }
 .preview-label {
@@ -417,7 +420,7 @@ body {
 /* ============================================================
    USE CASES
    ============================================================ */
-.usecases { background: var(--bg); }
+.usecases { background: var(--surface); }
 .usecase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -426,7 +429,7 @@ body {
   margin: 3.5rem auto 0;
 }
 .usecase-card {
-  background: var(--surface);
+  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
@@ -1064,6 +1067,22 @@ body {
 }
 
 /* ============================================================
+   PREVIEW INNER WRAPPER (max-width constraint)
+   ============================================================ */
+.preview-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .preview-inner { flex-direction: column; }
+}
+
+/* ============================================================
    TUTORIALS PAGE
    ============================================================ */
 
@@ -1290,3 +1309,249 @@ body {
   .tut-video-inner { flex-direction: column; gap: 3rem; }
   .repo-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   ABOUT PAGE (reworked)
+   ============================================================ */
+.about-problem { background: var(--surface); }
+.about-solution { background: var(--bg); }
+
+.about-side {
+  flex: 0 0 280px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.about-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.about-p {
+  font-size: 0.975rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.9;
+}
+.about-p a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61,140,64,0.25);
+  transition: color 0.2s, border-color 0.2s;
+}
+.about-p a:hover { color: var(--green3); border-color: var(--green3); }
+.about-p strong { color: var(--text); font-weight: 600; }
+
+.about-callout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--green-dim);
+  border: 1px solid rgba(61,140,64,0.18);
+  border-left: 3px solid var(--green);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-top: 0.5rem;
+}
+.about-callout-icon {
+  font-size: 1.1rem;
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.about-callout p {
+  font-size: 0.925rem;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.75;
+  font-style: italic;
+}
+
+/* What's next section */
+.about-next { background: var(--surface); }
+.about-next-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+}
+.about-next-text {
+  flex: 0 0 300px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.about-next-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+.about-next-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.about-next-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border2);
+  text-decoration: none;
+  position: relative;
+  transition: padding-left 0.25s;
+}
+.about-next-card:first-child { border-top: 1px solid var(--border2); }
+.about-next-card:hover { padding-left: 0.5rem; }
+.about-next-card-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+}
+.about-next-card h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.about-next-card p {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 480px;
+}
+.about-next-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--text3);
+  transition: color 0.2s, right 0.25s;
+}
+.about-next-card:hover .about-next-arrow { color: var(--green); right: -0.25rem; }
+
+/* About responsive */
+@media (max-width: 1024px) {
+  .about-side { position: static; flex: none; }
+  .about-next-text { position: static; flex: none; }
+  .about-next-inner { flex-direction: column; gap: 3rem; }
+}
+
+/* ============================================================
+   TEAM PAGE
+   ============================================================ */
+
+/* GEL section */
+.gel-section { background: var(--bg); }
+.gel-text {
+  flex: 1;
+  max-width: 460px;
+}
+.gel-card {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+.gel-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border2);
+}
+.gel-initials {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--green-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green3);
+  flex-shrink: 0;
+}
+.gel-name {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.gel-affil {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  margin-top: 0.2rem;
+}
+.gel-desc {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+.gel-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-top: 1px solid var(--border2);
+  padding-top: 1.25rem;
+}
+.gel-highlight-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.gel-highlight-label {
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 60px;
+  padding-top: 0.1rem;
+}
+
+@media (max-width: 1024px) {
+  .gel-text { max-width: 100%; }
+}
+
+/* GEL logo image */
+.gel-logo-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   RESOURCES PAGE (GBIF / Environmental Layers split)
+   ============================================================ */
+.res-gbif { background: var(--bg); }
+.res-datasets { background: var(--surface); }
+
+.res-tab--featured {
+  border: 1px solid rgba(61,140,64,0.18);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid rgba(61,140,64,0.18);
+}
+.res-tab--featured .res-tab-num { color: var(--green3); }

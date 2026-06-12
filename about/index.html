@@ -11,12 +11,12 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="../" class="nav-logo">Eco<span>Viewer</span></a>
     <ul class="nav-links">
       <li><a href="../">Home</a></li>
       <li><a href="../about/" class="active">About</a></li>
+      <li><a href="../team/">Team</a></li>
       <li><a href="../resources/">Resources</a></li>
       <li><a href="../tutorials/">Tutorials</a></li>
     </ul>
@@ -30,190 +30,131 @@
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="section-tag">// About EcoViewer</p>
-      <h1>The project behind<br /><em>the reference library</em></h1>
+      <h1>Why EcoViewer<br /><em>exists</em></h1>
       <p class="lead">
-        EcoViewer is an open-access environmental reference platform built to support
-        ecological fieldwork, remote sensing, and conservation science — globally.
+        EcoViewer grew out of a real and recurring challenge in global ecosystem science —
+        the need for a consistent, harmonised reference to classify and characterise
+        ecosystems anywhere on Earth.
       </p>
     </div>
   </section>
 
-  <!-- PROJECT DESCRIPTION -->
-  <section class="section about-project">
-    <div class="about-project-inner">
-      <div class="about-text-block">
-        <p class="section-tag">// What we built</p>
-        <h2 class="section-title">Bridging data and<br /><em>ecological practice</em></h2>
+  <!-- THE PROBLEM -->
+  <section class="section about-problem">
+    <div class="section-inner">
+      <div class="about-side">
+        <p class="section-tag">// The problem</p>
+        <h2 class="section-title">Mapping ecosystems<br /><em>at global scale</em></h2>
+      </div>
+      <div class="about-body">
+        <p class="about-p">
+          EcoViewer's origins are in ecosystem mapping. The <a href="https://global-ecosystems.org/" target="_blank" rel="noopener">Global Ecosystem Typology</a> provides a rigorous framework for classifying the world's ecosystems into a consistent hierarchy — from broad biomes down to individual ecosystem functional groups. Initiatives like the <strong>Global Ecosystems Atlas</strong> are putting that framework into practice, mapping and monitoring ecosystems at a planetary scale.
+        </p>
+        <p class="about-p">
+          But doing that work reliably requires environmental context — lots of it. What is the climate like at this location? What does the vegetation structure look like? Is there a seasonal water regime? What is the fire history? Without that grounding, ecosystem classification becomes guesswork.
+        </p>
+        <p class="about-p">
+          The same problem shows up across ecology more broadly. Species distribution modelling, habitat assessment, conservation planning, remote sensing annotation — all of these depend on the same underlying question: <em>what are the environmental conditions at this place?</em> And for all of them, assembling that information from scattered, heterogeneous repositories is slow, inconsistent, and hard to reproduce.
+        </p>
+        <div class="about-callout">
+          <span class="about-callout-icon">◎</span>
+          <p>Environmental datasets are publicly available — but fragmented across dozens of sources, each with different formats, projections, and access barriers. There was no single harmonised reference built for ecological practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SOLUTION -->
+  <section class="section about-solution">
+    <div class="section-inner">
+      <div class="about-side">
+        <p class="section-tag">// The solution</p>
+        <h2 class="section-title">Environmental context,<br /><em>anywhere on Earth</em></h2>
+      </div>
+      <div class="about-body">
+        <p class="about-p">
+          EcoViewer was built to solve that problem. The core idea: aggregate the best publicly available environmental datasets — climate, vegetation structure, surface water, fire disturbance — into a single harmonised reference, make it queryable at any point on Earth, and deliver it through a fast browser-based interface with no installation, no login, and no cost.
+        </p>
+        <p class="about-p">
+          The starting point was ecosystem classification, but the tool quickly proved useful far beyond that. Any question that depends on knowing the environmental conditions of a place — habitat suitability modelling, biodiversity assessment, land cover annotation, conservation planning, ecological research — benefits from the same underlying resource.
+        </p>
+        <p class="about-p">
+          EcoViewer also integrates species occurrence data from <a href="https://www.gbif.org/" target="_blank" rel="noopener">GBIF</a> — the Global Biodiversity Information Facility — cross-referenced to ecosystem types using peer-reviewed ecological literature. This bridges the gap between where species are observed and the environmental context in which they occur, opening up new ways to explore biodiversity patterns at global scale.
+        </p>
+        <p class="about-p">
+          The platform is open source, built on open data, and designed to grow. It is not a finished product but a living reference tool, developed iteratively in response to real scientific use cases.
+        </p>
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <span class="pillar-num">01</span>
+            <div>
+              <h3>Open Access</h3>
+              <p>No login, no licence fees. Freely accessible for scientific, educational, and conservation use.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">02</span>
+            <div>
+              <h3>Environmental Layers</h3>
+              <p>Climate, vegetation, water, and fire data harmonised from verified repositories into a single queryable reference.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">03</span>
+            <div>
+              <h3>GBIF Integration</h3>
+              <p>Species occurrence records cross-referenced to ecosystem types, connecting biodiversity data with environmental context.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-num">04</span>
+            <div>
+              <h3>Planetary Scale</h3>
+              <p>High-resolution global coverage across all biomes, powered by Google Earth Engine infrastructure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S NEXT -->
+  <section class="section about-next">
+    <div class="about-next-inner">
+      <div class="about-next-text">
+        <p class="section-tag">// Explore further</p>
+        <h2 class="section-title">What's inside<br /><em>EcoViewer</em></h2>
         <p class="section-body">
-          The challenge for many ecologists and remote sensing practitioners isn't a lack
-          of data — it's that environmental datasets are scattered across dozens of
-          repositories, each with different formats, resolutions, and coverage gaps.
-          EcoViewer was built to solve that.
+          Curious about the datasets, thematic layers, and scientific literature that
+          power EcoViewer? The Resources page documents everything — from data sources
+          and licences to the publications underpinning the GBIF cross-referencing methodology.
         </p>
-        <p class="section-body" style="margin-top: 1rem;">
-          By integrating multiple high-resolution datasets into a single, coherent
-          reference layer — and surfacing it through a fast, browser-based interface
-          powered by Google Earth Engine — EcoViewer gives analysts the ecological
-          context they need to characterise landscapes, annotate satellite imagery, and
-          conduct reproducible comparative studies at any scale.
-        </p>
+        <div class="about-next-links">
+          <a href="../resources/" class="btn-primary">Explore Resources →</a>
+          <a href="../app/" class="btn-ghost">Launch the App</a>
+        </div>
       </div>
-      <div class="about-pillars">
-        <div class="pillar-item">
-          <span class="pillar-num">01</span>
-          <div>
-            <h3>Open Access</h3>
-            <p>All reference layers are freely accessible, with no login or licensing barriers for scientific and conservation use.</p>
-          </div>
-        </div>
-        <div class="pillar-item">
-          <span class="pillar-num">02</span>
-          <div>
-            <h3>Multi-Source Integration</h3>
-            <p>Data is aggregated from verified environmental repositories and harmonised into a consistent, queryable reference layer.</p>
-          </div>
-        </div>
-        <div class="pillar-item">
-          <span class="pillar-num">03</span>
-          <div>
-            <h3>Planetary Scale</h3>
-            <p>Powered by Google Earth Engine, EcoViewer provides high-resolution coverage across all biomes and continents worldwide.</p>
-          </div>
-        </div>
-        <div class="pillar-item">
-          <span class="pillar-num">04</span>
-          <div>
-            <h3>Built for Practice</h3>
-            <p>Designed with ecologists and remote sensing specialists in mind — not just data engineers — for real-world annotation and fieldwork support.</p>
-          </div>
-        </div>
+      <div class="about-next-cards">
+        <a href="../team/" class="about-next-card">
+          <span class="about-next-card-tag">// Team</span>
+          <h3>Who built it</h3>
+          <p>Meet the team behind EcoViewer and the Global Ecology Lab at James Cook University.</p>
+          <span class="about-next-arrow">→</span>
+        </a>
+        <a href="../resources/" class="about-next-card">
+          <span class="about-next-card-tag">// Resources</span>
+          <h3>Data &amp; Methods</h3>
+          <p>All datasets, credits, licences, and the literature behind the ecological cross-referencing.</p>
+          <span class="about-next-arrow">→</span>
+        </a>
+        <a href="../tutorials/" class="about-next-card">
+          <span class="about-next-card-tag">// Tutorials</span>
+          <h3>Get started</h3>
+          <p>A quick-start guide, demo video, and source code repositories to get you up and running.</p>
+          <span class="about-next-arrow">→</span>
+        </a>
       </div>
     </div>
-  </section>
-
-  <!-- TEAM -->
-  <section class="section team">
-    <div class="section-inner centered">
-      <p class="section-tag">// Core Team</p>
-      <h2 class="section-title">The people who<br /><em>build EcoViewer</em></h2>
-      <p class="section-body" style="text-align:center; margin: 0 auto;">
-        EcoViewer is developed by a small team of researchers and engineers with backgrounds
-        in ecology, remote sensing, and geospatial computing.
-      </p>
-    </div>
-    <div class="team-grid">
-
-      <div class="team-card">
-        <div class="team-avatar">
-          <span>WM</span>
-        </div>
-        <div class="team-info">
-          <h3>William Masson</h3>
-          <p class="team-role">Research Software Engineer</p>
-          <p class="team-bio">Brief description of this person's background and contribution to the EcoViewer project. Replace with real bio.</p>
-          <div class="team-links">
-            <a href="https://www.linkedin.com/in/william--masson/" target="_blank" rel="noopener" class="team-link">LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar">
-          <span>DN</span>
-        </div>
-        <div class="team-info">
-          <h3>Dhruv Narayan</h3>
-          <p class="team-role">Biodiversity Data Scientist</p>
-          <p class="team-bio">Brief description of this person's background and contribution to the EcoViewer project. Replace with real bio.</p>
-          <div class="team-links">
-            <a href="https://www.linkedin.com/in/dhruvnarayan200176/" target="_blank" rel="noopener" class="team-link">LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar">
-          <span>RS</span>
-        </div>
-        <div class="team-info">
-          <h3>Rebecca Saunders</h3>
-          <p class="team-role">Role / Specialisation</p>
-          <p class="team-bio">Brief description of this person's background and contribution to the EcoViewer project. Replace with real bio.</p>
-          <div class="team-links">
-            <a href="https://www.linkedin.com/in/rebecca-saunders-0647a6259/" target="_blank" rel="noopener" class="team-link">LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-avatar">
-          <span>BS</span>
-        </div>
-        <div class="team-info">
-          <h3>Ben Steer</h3>
-          <p class="team-role">Remote Sensing Ecologist</p>
-          <p class="team-bio">Brief description of this person's background and contribution to the EcoViewer project. Replace with real bio.</p>
-          <div class="team-links">
-            <a href="https://www.linkedin.com/in/benjaminsteer/" target="_blank" rel="noopener" class="team-link">LinkedIn →</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTRIBUTORS -->
-  <section class="section contributors">
-    <div class="section-inner centered">
-      <p class="section-tag">// Contributors</p>
-      <h2 class="section-title">Supported by<br /><em>the community</em></h2>
-      <p class="section-body" style="text-align:center; margin: 0 auto 3rem;">
-        EcoViewer benefits from the contributions of researchers, data scientists, and
-        open-source developers around the world. Contributions include dataset curation,
-        bug reports, feature suggestions, and documentation.
-      </p>
-    </div>
-    <div class="contributors-grid">
-      <div class="contributor-card">
-        <div class="contributor-avatar"><span>GH</span></div>
-        <p class="contributor-name">Contributor Name</p>
-        <p class="contributor-detail">Dataset curation</p>
-      </div>
-      <div class="contributor-card">
-        <div class="contributor-avatar"><span>IJ</span></div>
-        <p class="contributor-name">Contributor Name</p>
-        <p class="contributor-detail">Bug fixes</p>
-      </div>
-      <div class="contributor-card">
-        <div class="contributor-avatar"><span>KL</span></div>
-        <p class="contributor-name">Contributor Name</p>
-        <p class="contributor-detail">Documentation</p>
-      </div>
-      <div class="contributor-card">
-        <div class="contributor-avatar"><span>MN</span></div>
-        <p class="contributor-name">Contributor Name</p>
-        <p class="contributor-detail">Feature suggestions</p>
-      </div>
-      <div class="contributor-card">
-        <div class="contributor-avatar"><span>OP</span></div>
-        <p class="contributor-name">Contributor Name</p>
-        <p class="contributor-detail">Data validation</p>
-      </div>
-      <div class="contributor-card contributor-card--ghost">
-        <div class="contributor-avatar contributor-avatar--plus"><span>+</span></div>
-        <p class="contributor-name">Contribute</p>
-        <p class="contributor-detail"><a href="https://github.com/ecoviewer" target="_blank" rel="noopener">View on GitHub →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="cta-inner">
-      <h2>Ready to explore<br /><em>the living world?</em></h2>
-      <a href="../app/" class="btn-primary large">Launch EcoViewer</a>
-    </div>
-    <div class="cta-bg"></div>
   </section>
 
   <!-- FOOTER -->
@@ -228,6 +169,7 @@
           <h4>Navigation</h4>
           <a href="../">Home</a>
           <a href="../about/">About</a>
+          <a href="../team/">Team</a>
           <a href="../resources/">Resources</a>
           <a href="../tutorials/">Tutorials</a>
           <a href="../app/">Launch App</a>
@@ -243,6 +185,7 @@
           <h4>External</h4>
           <a href="https://earthengine.google.com" target="_blank" rel="noopener">Google Earth Engine</a>
           <a href="https://earthengine.google.com/terms" target="_blank" rel="noopener">GEE Terms</a>
+          <a href="https://www.globalecologylab.org/" target="_blank" rel="noopener">Global Ecology Lab</a>
         </div>
       </div>
     </div>
