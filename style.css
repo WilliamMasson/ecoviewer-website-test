@@ -1555,3 +1555,67 @@ body {
   border-top: 1px solid rgba(61,140,64,0.18);
 }
 .res-tab--featured .res-tab-num { color: var(--green3); }
+
+/* Fix table overflow — allow wrapping in all cells */
+.td-name { white-space: normal !important; }
+.td-links { white-space: normal; }
+.data-table td { word-break: break-word; }
+
+/* ============================================================
+   ACKNOWLEDGEMENTS (team page)
+   ============================================================ */
+.ack-section { background: var(--bg); }
+.ack-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  align-items: flex-start;
+}
+.ack-header {
+  flex: 0 0 280px;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.ack-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.ack-item {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid var(--border2);
+  border-right: 1px solid var(--border2);
+}
+.ack-item:nth-child(3n) { border-right: none; }
+.ack-item:nth-last-child(-n+3) { border-bottom: none; }
+.ack-name {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.ack-inst {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 1024px) {
+  .ack-inner { flex-direction: column; gap: 3rem; }
+  .ack-header { position: static; flex: none; }
+  .ack-grid { grid-template-columns: repeat(2, 1fr); }
+  .ack-item:nth-child(3n) { border-right: 1px solid var(--border2); }
+  .ack-item:nth-child(2n) { border-right: none; }
+  .ack-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border2); }
+  .ack-item:nth-last-child(-n+2) { border-bottom: none; }
+}
+@media (max-width: 600px) {
+  .ack-grid { grid-template-columns: 1fr; }
+  .ack-item { border-right: none !important; }
+  .ack-item:last-child { border-bottom: none; }
+  .ack-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border2); }
+}
