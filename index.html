@@ -34,14 +34,15 @@
       <div class="hero-blob b2"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow"><span class="dot"></span> Global · Multi-Source · High-Resolution</p>
+      <p class="hero-eyebrow"><span class="dot"></span> Global · Open Access · Powered by GBIF</p>
       <h1 class="hero-title">
         A reference library<br />
         <em>for the living world</em>
       </h1>
       <p class="hero-sub">
-        EcoViewer is a multi-source environmental reference library providing high-resolution context
-        for ecological characterization and satellite imagery annotation — worldwide.
+        EcoViewer is an open-access environmental reference platform combining GBIF species
+        occurrence data with global environmental layers — to help ecologists, researchers,
+        and conservation practitioners understand ecosystems anywhere on Earth.
       </p>
       <div class="hero-actions">
         <a href="app/" class="btn-primary">Launch EcoViewer</a>
@@ -55,9 +56,9 @@
   <section class="stats-bar">
     <div class="stat"><span class="stat-num">Global</span><span class="stat-label">Coverage</span></div>
     <div class="stat-div"></div>
-    <div class="stat"><span class="stat-num">Multi</span><span class="stat-label">Source Data</span></div>
+    <div class="stat"><span class="stat-num">GBIF</span><span class="stat-label">Powered</span></div>
     <div class="stat-div"></div>
-    <div class="stat"><span class="stat-num">High-Res</span><span class="stat-label">Imagery</span></div>
+    <div class="stat"><span class="stat-num">Multi</span><span class="stat-label">Source Data</span></div>
     <div class="stat-div"></div>
     <div class="stat"><span class="stat-num">Open</span><span class="stat-label">Access</span></div>
   </section>
@@ -67,34 +68,35 @@
     <div class="section-inner">
       <div class="what-text">
         <p class="section-tag">// What is EcoViewer</p>
-        <h2 class="section-title">Ecological context,<br /><em>at any scale</em></h2>
+        <h2 class="section-title">Biodiversity &amp; environmental<br /><em>context, anywhere</em></h2>
         <p class="section-body">
-          EcoViewer brings together high-resolution environmental datasets from multiple sources into a single,
-          unified reference platform. Designed for ecologists, remote sensing specialists, and conservation
-          practitioners who need reliable ground-truth context for landscape analysis and imagery annotation.
+          EcoViewer brings together GBIF species occurrence data and global environmental
+          datasets into a single, unified reference platform. Designed for ecologists,
+          remote sensing specialists, and conservation practitioners who need reliable
+          ecological context for landscape analysis, imagery annotation, and biodiversity research.
         </p>
         <a href="about/" class="link-arrow">About the project →</a>
       </div>
       <div class="what-cards">
         <div class="feature-card">
-          <div class="card-icon">⬡</div>
-          <h3>Multi-Source Integration</h3>
-          <p>Aggregates data across diverse environmental repositories into a coherent, queryable reference layer.</p>
+          <div class="card-icon">◎</div>
+          <h3>GBIF Integration</h3>
+          <p>Species occurrence records from GBIF, cross-referenced to ecosystem types and biomes using peer-reviewed ecological literature.</p>
         </div>
         <div class="feature-card">
-          <div class="card-icon">◎</div>
-          <h3>Satellite Annotation</h3>
-          <p>Purpose-built context for labelling satellite imagery with ecological precision and confidence.</p>
+          <div class="card-icon">⬡</div>
+          <h3>Environmental Layers</h3>
+          <p>Climate, vegetation, water, and fire data harmonised from verified global repositories into a single queryable reference.</p>
         </div>
         <div class="feature-card">
           <div class="card-icon">◈</div>
           <h3>Global Reach</h3>
-          <p>From tropical rainforests to arctic tundra — comprehensive coverage across all biomes worldwide.</p>
+          <p>High-resolution coverage across all biomes and continents, powered by Google Earth Engine's planetary-scale infrastructure.</p>
         </div>
         <div class="feature-card">
           <div class="card-icon">⬕</div>
-          <h3>Built on Earth Engine</h3>
-          <p>Powered by Google Earth Engine's planetary-scale computing infrastructure for fast, reliable access.</p>
+          <h3>Open Access</h3>
+          <p>No login, no licence fees. Freely accessible for scientific, educational, and conservation use anywhere in the world.</p>
         </div>
       </div>
     </div>
@@ -102,26 +104,28 @@
 
   <!-- PREVIEW SECTION -->
   <section class="section preview">
-    <div class="section-inner">
+    <div class="preview-top">
       <div class="preview-label">
         <p class="section-tag">// App Preview</p>
         <h2 class="section-title">Explore the<br /><em>interface</em></h2>
-        <p class="section-body">Interact with global environmental layers directly in your browser. No installation required.</p>
-        <a href="app/" class="btn-primary" style="margin-top:2rem;display:inline-block">Open Full App →</a>
       </div>
-      <div class="preview-frame">
-        <div class="frame-bar">
-          <span class="fb r"></span><span class="fb y"></span><span class="fb g"></span>
-          <span class="frame-url">ecoviewer.org/app</span>
-        </div>
-        <div class="frame-content">
-          <iframe
-            src="https://geo-global-ecosystems-atlas.projects.earthengine.app/view/ecoviewer"
-            title="EcoViewer App"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </div>
+      <div class="preview-desc">
+        <p class="section-body">Interact with GBIF species occurrences and global environmental layers directly in your browser. Click anywhere on the map to get instant ecological context for that location. No installation required.</p>
+        <a href="app/" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">Open Full App →</a>
+      </div>
+    </div>
+    <div class="preview-frame preview-frame--wide">
+      <div class="frame-bar">
+        <span class="fb r"></span><span class="fb y"></span><span class="fb g"></span>
+        <span class="frame-url">ecoviewer.org/app</span>
+      </div>
+      <div class="frame-content">
+        <iframe
+          src="https://geo-global-ecosystems-atlas.projects.earthengine.app/view/ecoviewer"
+          title="EcoViewer App"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </section>
@@ -135,18 +139,18 @@
     <div class="usecase-grid">
       <div class="usecase-card">
         <span class="uc-num">01</span>
-        <h3>Remote Sensing Analysts</h3>
-        <p>Validate and annotate satellite imagery with high-confidence ecological reference data from multiple verified sources.</p>
+        <h3>Ecologists &amp; Researchers</h3>
+        <p>Access consistent, reproducible environmental and biodiversity context for comparative studies, habitat assessment, and longitudinal ecosystem analysis.</p>
       </div>
       <div class="usecase-card">
         <span class="uc-num">02</span>
-        <h3>Conservation Practitioners</h3>
-        <p>Characterise landscapes and monitor ecosystem condition across large, complex territories at continental scale.</p>
+        <h3>Remote Sensing Analysts</h3>
+        <p>Validate and annotate satellite imagery with high-confidence ecological reference data, grounded in peer-reviewed global datasets.</p>
       </div>
       <div class="usecase-card">
         <span class="uc-num">03</span>
-        <h3>Ecological Researchers</h3>
-        <p>Access consistent, reproducible environmental context for comparative studies and longitudinal ecosystem analysis.</p>
+        <h3>Conservation Practitioners</h3>
+        <p>Characterise landscapes, explore species occurrences, and monitor ecosystem condition across large territories at continental scale.</p>
       </div>
     </div>
   </section>
