@@ -95,15 +95,15 @@
           <div class="pillar-item">
             <span class="pillar-num">02</span>
             <div>
-              <h3>Environmental Layers</h3>
-              <p>Climate, vegetation, water, and fire data harmonised from verified repositories into a single queryable reference.</p>
+              <h3>GBIF Integration</h3>
+              <p>Species occurrence records cross-referenced to ecosystem types, connecting biodiversity data with environmental context.</p>
             </div>
           </div>
           <div class="pillar-item">
             <span class="pillar-num">03</span>
             <div>
-              <h3>GBIF Integration</h3>
-              <p>Species occurrence records cross-referenced to ecosystem types, connecting biodiversity data with environmental context.</p>
+              <h3>Environmental Layers</h3>
+              <p>Climate, vegetation, water, and fire data harmonised from verified repositories into a single queryable reference.</p>
             </div>
           </div>
           <div class="pillar-item">
@@ -112,6 +112,53 @@
               <h3>Planetary Scale</h3>
               <p>High-resolution global coverage across all biomes, powered by Google Earth Engine infrastructure.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUTION -->
+  <section class="section about-evolution">
+    <div class="about-evolution-inner">
+      <div class="about-evolution-header">
+        <p class="section-tag">// How it evolved</p>
+        <h2 class="section-title">A tool in<br /><em>constant motion</em></h2>
+        <p class="section-body">
+          EcoViewer has changed significantly since its first prototype — and will continue
+          to evolve. What started as a regional viewer for a specific geographic area has grown
+          into a global, multi-source reference platform. New datasets, new regions, and
+          new analytical capabilities are added as the science develops and the community
+          around the tool grows.
+        </p>
+      </div>
+
+      <div class="before-after-wrap">
+        <div class="before-after-slider" id="baSlider">
+          <!-- AFTER is the base layer (full width, left side) -->
+          <div class="ba-after">
+            <img src="../img/ecoviewer_after.png" alt="EcoViewer — current version" draggable="false" />
+          </div>
+          <!-- BEFORE clips from the right -->
+          <div class="ba-before" id="baBefore">
+            <img src="../img/ecoviewer_before.png" alt="EcoViewer — first prototype" draggable="false" />
+          </div>
+          <div class="ba-handle" id="baHandle">
+            <div class="ba-handle-line"></div>
+            <div class="ba-handle-circle">
+              <span>◀</span><span>▶</span>
+            </div>
+            <div class="ba-handle-line"></div>
+          </div>
+        </div>
+        <div class="ba-labels">
+          <div class="ba-label ba-label--after">
+            <span class="ba-label-tag">After</span>
+            <p>Global platform · GBIF integration · Environmental layers</p>
+          </div>
+          <div class="ba-label ba-label--before">
+            <span class="ba-label-tag">Before</span>
+            <p>Regional viewer · First prototype</p>
           </div>
         </div>
       </div>
@@ -135,16 +182,16 @@
         </div>
       </div>
       <div class="about-next-cards">
-        <a href="../team/" class="about-next-card">
-          <span class="about-next-card-tag">// Team</span>
-          <h3>Who built it</h3>
-          <p>Meet the team behind EcoViewer and the Global Ecology Lab at James Cook University.</p>
-          <span class="about-next-arrow">→</span>
-        </a>
         <a href="../resources/" class="about-next-card">
           <span class="about-next-card-tag">// Resources</span>
           <h3>Data &amp; Methods</h3>
           <p>All datasets, credits, licences, and the literature behind the ecological cross-referencing.</p>
+          <span class="about-next-arrow">→</span>
+        </a>
+        <a href="../team/" class="about-next-card">
+          <span class="about-next-card-tag">// Team</span>
+          <h3>Who built it</h3>
+          <p>Meet the team behind EcoViewer and the Global Ecology Lab at James Cook University.</p>
           <span class="about-next-arrow">→</span>
         </a>
         <a href="../tutorials/" class="about-next-card">
@@ -196,5 +243,44 @@
   </footer>
 
   <script src="../main.js"></script>
+  <script>
+    const slider = document.getElementById('baSlider');
+    const before = document.getElementById('baBefore');
+    const handle = document.getElementById('baHandle');
+    const beforeImg = before.querySelector('img');
+    let dragging = false;
+
+    function updateSliderWidth() {
+      const w = slider.getBoundingClientRect().width;
+      beforeImg.style.width = w + 'px';
+    }
+
+    function setPosition(x) {
+      const rect = slider.getBoundingClientRect();
+      let pct = (x - rect.left) / rect.width;
+      pct = Math.max(0.02, Math.min(0.98, pct));
+      before.style.left = (pct * 100) + '%';
+      before.style.width = ((1 - pct) * 100) + '%';
+      handle.style.left = (pct * 100) + '%';
+    }
+
+    handle.addEventListener('mousedown', e => { dragging = true; e.preventDefault(); });
+    window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+
+    handle.addEventListener('touchstart', e => { dragging = true; e.preventDefault(); }, { passive: false });
+    window.addEventListener('touchmove', e => { if (dragging) setPosition(e.touches[0].clientX); }, { passive: false });
+    window.addEventListener('touchend', () => { dragging = false; });
+
+    function init() {
+      updateSliderWidth();
+      const r = slider.getBoundingClientRect();
+      setPosition(r.left + r.width * 0.5);
+    }
+
+    window.addEventListener('resize', () => { updateSliderWidth(); });
+    window.addEventListener('load', init);
+    init();
+  </script>
 </body>
 </html>

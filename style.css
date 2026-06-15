@@ -1368,7 +1368,7 @@ body {
 }
 
 /* What's next section */
-.about-next { background: var(--surface); }
+.about-next { background: var(--bg); }
 .about-next-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -1643,3 +1643,133 @@ body {
 .ack-grid--2col .ack-item:nth-child(2n) { border-right: none; }
 .ack-grid--2col .ack-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border2); }
 .ack-grid--2col .ack-item:nth-last-child(-n+2) { border-bottom: none; }
+
+/* ============================================================
+   ABOUT — EVOLUTION / BEFORE-AFTER SLIDER
+   ============================================================ */
+.about-evolution { background: var(--surface); }
+.about-evolution-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-evolution-header {
+  max-width: 620px;
+  margin-bottom: 3rem;
+}
+
+.before-after-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.before-after-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border2);
+  box-shadow: var(--shadow-lg);
+  cursor: col-resize;
+  user-select: none;
+}
+/* AFTER: full base layer on the left */
+.ba-after {
+  position: absolute;
+  inset: 0;
+}
+.ba-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+  pointer-events: none;
+}
+/* BEFORE: clips from right side, image stays full-slider-width */
+.ba-before {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  left: 50%;
+  overflow: hidden;
+  border-left: 2px solid #fff;
+}
+.ba-before img {
+  position: absolute;
+  top: 0; right: 0;
+  /* Always fill the full slider width, not just the clipped portion */
+  width: var(--slider-w, 100%);
+  height: 100%;
+  object-fit: cover;
+  object-position: right top;
+  display: block;
+  pointer-events: none;
+}
+.ba-handle {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: col-resize;
+  z-index: 10;
+}
+.ba-handle-line {
+  flex: 1;
+  width: 2px;
+  background: #fff;
+  opacity: 0.9;
+}
+.ba-handle-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  color: var(--text3);
+}
+
+/* Labels below slider */
+.ba-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ba-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 48%;
+}
+.ba-label--before { text-align: right; }
+.ba-label-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.ba-label--before .ba-label-tag { color: var(--text3); }
+.ba-label--after .ba-label-tag { color: var(--green); }
+.ba-label p {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--text3);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .before-after-slider { aspect-ratio: 4 / 3; }
+}
+
+/* Prevent year column from wrapping in GBIF literature table */
+.td-year { white-space: nowrap; }
