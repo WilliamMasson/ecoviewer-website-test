@@ -1619,3 +1619,27 @@ body {
   .ack-item:last-child { border-bottom: none; }
   .ack-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border2); }
 }
+
+/* Team photo avatars */
+.team-avatar--photo {
+  background: none;
+  border: 2px solid var(--border2);
+  overflow: hidden;
+}
+.team-avatar--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Acknowledgements 2-column variant */
+.ack-section { background: var(--surface); }
+.ack-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.ack-grid--2col .ack-item:nth-child(3n) { border-right: 1px solid var(--border2); }
+.ack-grid--2col .ack-item:nth-child(2n) { border-right: none; }
+.ack-grid--2col .ack-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border2); }
+.ack-grid--2col .ack-item:nth-last-child(-n+2) { border-bottom: none; }
