@@ -1878,3 +1878,33 @@ body {
   .res-gbif-header { flex-direction: column; }
   .res-gbif-text { position: static; }
 }
+
+/* ============================================================
+   MOBILE FIXES
+   ============================================================ */
+
+/* Fix 1: unstick .what-text on mobile so it doesn't overlap content */
+@media (max-width: 1024px) {
+  .what-text { position: static; }
+}
+
+/* Fix 2: mobile nav menu — show when .open is toggled by burger */
+@media (max-width: 1024px) {
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border2);
+    padding: 1.5rem 2rem 2rem;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-md);
+    z-index: 99;
+  }
+  .nav-links.open a {
+    font-size: 1rem;
+    color: var(--text2);
+  }
+}
