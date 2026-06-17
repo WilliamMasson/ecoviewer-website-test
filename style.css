@@ -1813,3 +1813,68 @@ body {
 /* Homepage preview — override old flex layout to stack vertically */
 .preview { display: block; }
 .preview-label { flex: none; position: static; }
+
+/* ============================================================
+   GBIF SECTION — TWO-COLUMN HEADER WITH CALLOUT
+   ============================================================ */
+.res-gbif-header {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.res-gbif-text {
+  flex: 1;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+.res-gbif-text .section-body a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61,140,64,0.25);
+  transition: color 0.2s, border-color 0.2s;
+}
+.res-gbif-text .section-body a:hover { color: var(--green3); border-color: var(--green3); }
+.res-gbif-callout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.res-gbif-callout-block {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--green);
+}
+.res-gbif-callout-block + .res-gbif-callout-block {
+  margin-top: 1rem;
+}
+.res-callout-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--green);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.65rem;
+}
+.res-callout-body {
+  font-size: 0.875rem;
+  color: var(--text2);
+  font-weight: 400;
+  line-height: 1.8;
+}
+.res-callout-body a {
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61,140,64,0.25);
+  transition: color 0.2s;
+}
+.res-callout-body a:hover { color: var(--green3); }
+.res-callout-body strong { color: var(--text); font-weight: 600; }
+.res-callout-body em { font-style: italic; }
+
+@media (max-width: 1024px) {
+  .res-gbif-header { flex-direction: column; }
+  .res-gbif-text { position: static; }
+}

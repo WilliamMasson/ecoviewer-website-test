@@ -33,7 +33,7 @@
       <h1>Data, methods,<br /><em>and references</em></h1>
       <p class="lead">
         An overview of how EcoViewer is structured, the biodiversity and environmental
-        data that power it, and the scientific literature underpinning the methodology.
+        data that power it, and the scientific literature underpinning the ecosystem indicator species methodology.
       </p>
     </div>
   </section>
@@ -121,32 +121,57 @@
   <!-- GBIF SECTION -->
   <section class="section res-gbif">
     <div class="res-table-wrap">
-      <div class="res-section-header">
-        <p class="section-tag">// GBIF Ecosystem Indicator Species</p>
-        <h2 class="section-title">Connecting biodiversity<br /><em>to ecosystem types</em></h2>
-        <p class="section-body">
-          EcoViewer integrates species occurrence records from the
-          <a href="https://www.gbif.org/" target="_blank" rel="noopener">Global Biodiversity Information Facility (GBIF)</a>
-          — the largest open repository of biodiversity data in the world. Not all species in GBIF
-          can be linked to a specific ecosystem type. EcoViewer focuses on
-          <strong>ecosystem indicator species</strong> — species whose presence is
-          characteristic of, and often instrumental in shaping, a specific ecosystem type or biome.
-          Each occurrence record is matched to an ecosystem type from the
-          <a href="https://global-ecosystems.org/" target="_blank" rel="noopener">IUCN Global Ecosystem Typology</a>,
-          or to a broader biome where a specific ecosystem type cannot be reliably determined.
-        </p>
-        <p class="section-body" style="margin-top:1rem;">
-          The methodology is built on a growing body of peer-reviewed literature relating
-          species distributions, habitat associations, and biogeographic classifications
-          to ecosystem functional groups. A selection of the key references is listed below.
-        </p>
+      <div class="res-gbif-header">
+        <div class="res-gbif-text">
+          <p class="section-tag">// GBIF Ecosystem Indicator Species</p>
+          <h2 class="section-title">Connecting biodiversity<br /><em>to ecosystem types</em></h2>
+          <p class="section-body">
+            EcoViewer integrates species occurrence records from the
+            <a href="https://www.gbif.org/" target="_blank" rel="noopener">Global Biodiversity Information Facility (GBIF)</a>
+            — the largest open repository of biodiversity data in the world. Not all species in GBIF
+            can be linked to a specific ecosystem type. EcoViewer focuses on
+            <strong>ecosystem indicator species</strong> — species whose physiological characteristics
+            allow them to be successful in specific
+            <a href="https://global-ecosystems.org/" target="_blank" rel="noopener">Ecosystem Functional Groups</a>
+            and help shape those ecosystems.
+          </p>
+          <p class="section-body" style="margin-top:1rem;">
+            Each occurrence record is matched to an Ecosystem Functional Group, or to a broader
+            biome where a specific group cannot be reliably determined. The methodology is built
+            on a growing body of peer-reviewed literature. A selection of key references is listed below.
+          </p>
+        </div>
 
-        <div class="about-callout" style="margin-top: 1.5rem;">
-          <span class="about-callout-icon">◎</span>
-          <div>
-            <p><strong>What is an ecosystem indicator species?</strong></p>
-            <p style="margin-top: 0.4rem;">An ecosystem indicator species is a species whose presence strongly suggests the existence of a particular ecosystem type. These are often species that are ecological engineers — they actively create or maintain the conditions that define that ecosystem. For example, <em>Rhizophora</em> (red mangrove) is a salt-tolerant tree that builds and stabilises mangrove ecosystems; its presence is a strong indicator of mangrove habitat. Similarly, reef-building corals are engineers of tropical coral reef ecosystems.</p>
-            <p style="margin-top: 0.75rem; font-style: normal; font-weight: 400;">It is important to note that the presence of an indicator species does not guarantee the ecosystem is present at that exact location — occurrence records may reflect individuals outside their typical habitat, historical records, or edge populations. They are best interpreted as signals of likely ecosystem presence, not definitive maps.</p>
+        <div class="res-gbif-callout">
+          <div class="res-gbif-callout-block">
+            <p class="res-callout-label">// What is an Ecosystem Functional Group?</p>
+            <p class="res-callout-body">
+              The <a href="https://global-ecosystems.org/" target="_blank" rel="noopener">IUCN Global Ecosystem Typology (GET)</a>
+              classifies all of Earth's ecosystems into a six-level hierarchy. An
+              <strong>Ecosystem Functional Group</strong> is the third level — a group of related
+              ecosystems within a biome that share common ecological drivers, promoting similar
+              biotic traits. For example, mangrove forests are an Ecosystem Functional Group:
+              distinct from tropical rainforests or seagrass beds, yet sharing the intertidal
+              realm with other coastal wetland types.
+            </p>
+          </div>
+
+          <div class="res-gbif-callout-block" style="margin-top: 1rem;">
+            <p class="res-callout-label">// What is an ecosystem indicator species?</p>
+            <p class="res-callout-body">
+              We define ecosystem indicator species as species whose physiological characteristics
+              allow them to thrive in specific Ecosystem Functional Groups and help shape those
+              ecosystems. For example, mangrove tree species (<em>Rhizophora</em> spp.) have
+              adaptations that allow them to survive at the interface of marine, freshwater, and
+              terrestrial realms — and in doing so, they build and maintain intertidal forests.
+            </p>
+            <p class="res-callout-body" style="margin-top: 0.6rem;">
+              <strong>Important caveat:</strong> the presence of an ecosystem indicator species
+              does not mean that species is <em>only</em> found in that Ecosystem Functional Group,
+              nor that the ecosystem is definitively present at that location. Rather, it indicates
+              a higher likelihood of finding that ecosystem type there. Occurrence records should
+              be interpreted as signals, not definitive maps.
+            </p>
           </div>
         </div>
       </div>
