@@ -6,7 +6,6 @@ The platform is built on [Google Earth Engine](https://earthengine.google.com/) 
 
 🌐 **Website:** [ecoviewer.org](https://ecoviewer.org)
 
----
 
 ## What EcoViewer does
 
@@ -17,7 +16,6 @@ EcoViewer provides two complementary types of data for any location on Earth:
 
 Click anywhere on the map to get instant ecological context for that location. Switch between thematic panels to explore different dimensions of the environment.
 
----
 
 ## Repositories
 
@@ -30,17 +28,15 @@ Holds all code required to extract and process GBIF species occurrence data for 
 ### [`ecoviewer-website`](https://github.com/ecoviewer/ecoviewer-website)
 Holds all code required to build and deploy the EcoViewer website, built with plain HTML, CSS, and JavaScript and hosted on GitHub Pages.
 
----
 
 ## Feedback & contributions
 
 We welcome feedback, bug reports, dataset suggestions, and feature requests. Please open an issue in the most relevant repository:
 
-- **Bug on the website** → [`ecoviewer-website`](https://github.com/ecoviewer/ecoviewer-website/issues)
-- **Issue with the app or request to add a dataset** → [`ecoviewer-app`](https://github.com/ecoviewer/ecoviewer-app/issues)
-- **Suggestion for the GBIF pipeline** → [`ecoviewer-gbif-processing`](https://github.com/ecoviewer/ecoviewer-gbif-processing/issues)
+- [`ecoviewer-app`](https://github.com/ecoviewer/ecoviewer-app/issues) — anything related to the app, its layers, or datasets
+- [`ecoviewer-gbif-processing`](https://github.com/ecoviewer/ecoviewer-gbif-processing/issues) — anything related to the GBIF data pipeline
+- [`ecoviewer-website`](https://github.com/ecoviewer/ecoviewer-website/issues) — anything related to the website
 
----
 
 ## About
 
