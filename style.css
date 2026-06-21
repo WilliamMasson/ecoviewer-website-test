@@ -267,6 +267,14 @@ body {
   letter-spacing: -0.02em;
 }
 .cta-inner h2 em { font-style: italic; color: var(--accent); }
+.cta-sub {
+  color: rgba(255,255,255,0.75);
+  font-family: var(--sans);
+  font-size: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 480px;
+  line-height: 1.7;
+}
 .cta-band .btn-primary { background: #fff; color: var(--green3); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
 .cta-band .btn-primary:hover { background: var(--accent); color: var(--green3); transform: translateY(-2px); }
 
