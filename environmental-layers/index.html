@@ -175,8 +175,13 @@
           In colder climates, the panel additionally reports estimated snow days and flags
           whether the location likely falls within the Polar and cryogenic biome. Users can
           also generate <strong>interactive climate charts</strong> showing temperature and
-          rainfall trends over the last 10 years — useful for understanding long-term
-          ecosystem condition and identifying seasonality patterns.
+          rainfall trends over the last 10 years. The precipitation chart is derived from
+          <strong>CHIRPS</strong> (Climate Hazards Group InfraRed Precipitation with Stations),
+          a pentad-average dataset freely available in Google Earth Engine. The temperature
+          chart uses the <strong>ERA5-Land</strong> reanalysis dataset. These charts are
+          useful for understanding long-term trends in ecosystem condition and identifying
+          seasonal patterns — particularly when distinguishing fire-season dry periods
+          from wet-season recovery.
         </p>
         <div class="el-ref-card">
           <div class="el-ref-card-header">Datasets</div>
@@ -454,12 +459,18 @@
   </section>
 
   <!-- CITE NOTE -->
-  <div class="el-cite-note">
-    If you use EcoViewer in your research, please cite the relevant datasets above alongside the
-    <a href="https://github.com/ecoviewer" target="_blank" rel="noopener">EcoViewer platform</a>.
-    Data is aggregated from third-party sources; users should consult original providers for full
-    licence terms and usage constraints.
-  </div>
+  <section class="el-section el-cite-note">
+    <div class="el-section-inner">
+      <div class="el-section-content">
+        <div class="el-cite-note">
+          If you use EcoViewer in your research, please cite the relevant datasets above alongside the
+          <a href="https://github.com/ecoviewer" target="_blank" rel="noopener">EcoViewer platform</a>.
+          Data is aggregated from third-party sources; users should consult original providers for full
+          licence terms and usage constraints.
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">

@@ -1299,11 +1299,15 @@ body {
 /* Dataset reference card */
 .el-ref-card {
   margin-top: 1.75rem;
-  background: var(--bg);
   border: 1px solid var(--border2);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
+.el-overview .el-ref-card,
+.el-vegetation .el-ref-card,
+.el-fire .el-ref-card { background: var(--surface); }
+.el-climate .el-ref-card,
+.el-water .el-ref-card { background: var(--bg); }
 .el-ref-card-header {
   padding: 0.75rem 1.25rem;
   background: var(--bg2);
@@ -1392,17 +1396,16 @@ body {
 }
 
 /* Alternating backgrounds */
-.el-overview   { background: var(--surface); }
-.el-climate    { background: var(--bg); }
-.el-vegetation { background: var(--surface); }
-.el-water      { background: var(--bg); }
-.el-fire       { background: var(--surface); }
+.el-overview   { background: var(--bg); }
+.el-climate    { background: var(--surface); }
+.el-vegetation { background: var(--bg); }
+.el-water      { background: var(--surface); }
+.el-fire       { background: var(--bg); }
+.el-cite-note  { background: var(--surface); }
 
 /* Cite note at bottom */
 .el-cite-note {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4rem 5rem;
   font-size: 0.85rem;
   color: var(--text3);
   font-weight: 400;
@@ -1415,7 +1418,6 @@ body {
   .el-section { padding: 5rem 2rem; }
   .el-section-inner { flex-direction: column !important; gap: 3rem; }
   .el-section-image { position: static; flex: none; width: 100%; }
-  .el-cite-note { padding: 0 2rem 4rem; }
 }
 
 /* ============================================================
